@@ -3,13 +3,19 @@ import random
 import time
 import sys
 import os
+from colorama import Fore
+
 
 # Magic 8 Ball
 
-answers = ["It is certain", "It is decidedly so", "Without a doubt", "Yes definitely", "You may rely on it",
-           "As I see it, yes", "Most likely", "Outlook good", "Yes", "Signs point to yes", "Reply hazy try again",
-           "Ask again later", "Better not tell you now", "Cannot predict now", "Concentrate and ask again",
-           "Don't count on it", "My reply is no", "My sources say no", "Outlook not so good", "Very doubtful"]
+answers = [Fore.GREEN + "It is certain", Fore.GREEN + "It is decidedly so",
+           Fore.GREEN + "Without a doubt", Fore.GREEN + "Yes definitely", Fore.GREEN + "You may rely on it", Fore.GREEN +
+           "As I see it, yes", Fore.GREEN + "Most likely", Fore.GREEN + "Outlook good",Fore.GREEN +  "Yes", Fore.GREEN + "Signs point to yes",
+           Fore.BLUE + "Reply hazy try again",  Fore.BLUE +
+           "Ask again later", Fore.BLUE + "Better not tell you now", Fore.BLUE + "Cannot predict now",  Fore.BLUE +
+           "Concentrate and ask again",
+           Fore.RED + "Don't count on it", Fore.RED + "My reply is no", Fore.RED + "My sources say no", Fore.RED + "Outlook not so good",
+           Fore.RED + "Very doubtful"]
 
 question = raw_input("What is your question? ")
 print "I am thinking..."
@@ -29,5 +35,4 @@ if results == 1:
 
 else:
     sys.exit()
-
 

@@ -1,4 +1,5 @@
 import sys
+import os
 h = input("Insert how many hits he had? ")
 bb = input("Insert how many walks he had? ")
 hbp = input("Insert how many times he got hit by a pitch? ")
@@ -11,10 +12,12 @@ ob2 = ab + bb + hbp + sf
 obp = ob1 / float(ob2)
 print "%s's on-base percentage is %f" % (batter, obp)
 
+desktop = os.path.expanduser("~/Desktop/obp.txt")
+
 results = input("Press 1 to save your results ")
 if results == 1:
-	results = open('/users/akaash/desktop/obp.txt', 'a')
-	results.write('%f %s \n' % (obp, batter))
+	results = open(desktop, 'a')
+	results.write('%s  %f \n' % (batter, obp))
 	results.close()
 else:
 	sys.exit()
